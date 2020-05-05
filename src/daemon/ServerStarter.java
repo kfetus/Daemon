@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 public class ServerStarter {
 
+	
 	private Logger logger = LogManager.getLogger(getClass());
 	
 	private ServerSocket sc;

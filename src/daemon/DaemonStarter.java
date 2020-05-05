@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 public class DaemonStarter {
 
+	
 	private static final Logger logger = LogManager.getLogger(DaemonStarter.class);
 	
 	public static void main(String[] args) {
