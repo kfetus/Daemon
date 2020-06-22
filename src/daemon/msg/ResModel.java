@@ -31,12 +31,15 @@ public class ResModel implements Serializable{
 		String retStr = "";
 		
 		logger.debug("###### nowMsg = [{}] ######",nowMsg);
-		if(len > nowMsg.length()) len = nowMsg.length();
+		
+		if(len > nowMsg.length()) { len = nowMsg.length();}
+		
 		logger.debug("###### len = [{}] ######",len);
 		for(int i = 0 ; i < len; i++) {
-			logger.debug("###### Character.getType(data.charAt(i))[{}]######",Character.getType(nowMsg.charAt(i)));
-			logger.debug("###### data.charAt(i)[{}]######",nowMsg.charAt(i));
-			if( Character.getType(nowMsg.charAt(i)) == 5) {
+			char temp = nowMsg.charAt(i);
+			logger.debug("###### Char Info="+(int)temp +"$"+ temp +"$"+ Character.getType(nowMsg.charAt(i))
+			 +"$"+ Integer.toBinaryString((int)temp) +"$"+ Integer.toHexString((int)temp) +"$"+ String.format("0x%02x", (int)temp));
+			if( Character.getType(temp) == 5 || (int) temp == 12288) {
 				len--;
 			}
 		}
